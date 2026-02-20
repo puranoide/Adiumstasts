@@ -1,0 +1,473 @@
+[
+  {
+    "id": 1,
+    "empresa": "ADIUM PERÚ",
+    "mes": "Enero",
+    "anio": 2026,
+    "links": [
+      {
+        "id": 1,
+        "reporte_id": 1,
+        "label": "REPORTE SOCIAL",
+        "url": "#",
+        "title": "Reporte social de enero 2026"
+      },
+      {
+        "id": 2,
+        "reporte_id": 1,
+        "label": "REPORTE PLATAFORMA",
+        "url": "#",
+        "title": "Reporte plataforma de enero 2026"
+      }
+    ],
+    "marcas": [
+      {
+        "id": 1,
+        "reporte_id": 1,
+        "nombre": "Adium Pro",
+        "secciones": [
+          {
+            "id": 1,
+            "marca_id": 1,
+            "titulo": "Inversión",
+            "valor_principal": "S/.1600",
+            "detalles": [
+              { "id": 1, "seccion_id": 1, "label": "Meta Ads",     "valor": "S/.500" },
+              { "id": 2, "seccion_id": 1, "label": "Google Ads",   "valor": "S/.600" },
+              { "id": 3, "seccion_id": 1, "label": "Linkedin Ads", "valor": "S/.500" }
+            ]
+          },
+          {
+            "id": 2,
+            "marca_id": 1,
+            "titulo": "Post social",
+            "valor_principal": "30",
+            "detalles": [
+              { "id": 4, "seccion_id": 2, "label": "Facebook",  "valor": "15" },
+              { "id": 5, "seccion_id": 2, "label": "Instagram", "valor": "15" }
+            ]
+          },
+          {
+            "id": 3,
+            "marca_id": 1,
+            "titulo": "Posts web",
+            "valor_principal": "45",
+            "detalles": [
+              { "id": 6, "seccion_id": 3, "label": "Publicaciones", "valor": "20" },
+              { "id": 7, "seccion_id": 3, "label": "Cursos",        "valor": "25" }
+            ]
+          },
+          {
+            "id": 4,
+            "marca_id": 1,
+            "titulo": "Visitas",
+            "valor_principal": "20",
+            "detalles": [
+              { "id": 8,  "seccion_id": 4, "label": "Nuevo",      "valor": "10" },
+              { "id": 9,  "seccion_id": 4, "label": "Recurrente", "valor": "10" }
+            ]
+          },
+          {
+            "id": 5,
+            "marca_id": 1,
+            "titulo": "Tráfico",
+            "valor_principal": "420",
+            "detalles": [
+              { "id": 10, "seccion_id": 5, "label": "Pagado",   "valor": "300" },
+              { "id": 11, "seccion_id": 5, "label": "Orgánico", "valor": "120" }
+            ]
+          }
+        ],
+        "metricas_simples": [
+          { "id": 1, "marca_id": 1, "label": "Tiempo",       "valor": "1200 min" },
+          { "id": 2, "marca_id": 1, "label": "Rebote",       "valor": "40%" },
+          { "id": 3, "marca_id": 1, "label": "Conversiones", "valor": "10%" }
+        ]
+      },
+      {
+        "id": 2,
+        "reporte_id": 1,
+        "nombre": "Mi Salud es Hoy",
+        "secciones": [
+          {
+            "id": 6,
+            "marca_id": 2,
+            "titulo": "Inversión",
+            "valor_principal": "S/.1500",
+            "detalles": [
+              { "id": 12, "seccion_id": 6, "label": "Meta Ads",     "valor": "S/.500" },
+              { "id": 13, "seccion_id": 6, "label": "Google Ads",   "valor": "S/.500" },
+              { "id": 14, "seccion_id": 6, "label": "Linkedin Ads", "valor": "S/.500" }
+            ]
+          },
+          {
+            "id": 7,
+            "marca_id": 2,
+            "titulo": "Post social",
+            "valor_principal": "28",
+            "detalles": [
+              { "id": 15, "seccion_id": 7, "label": "Facebook",  "valor": "14" },
+              { "id": 16, "seccion_id": 7, "label": "Instagram", "valor": "14" }
+            ]
+          },
+          {
+            "id": 8,
+            "marca_id": 2,
+            "titulo": "Visitas",
+            "valor_principal": "18",
+            "detalles": [
+              { "id": 17, "seccion_id": 8, "label": "Nuevo",      "valor": "10" },
+              { "id": 18, "seccion_id": 8, "label": "Recurrente", "valor": "8" }
+            ]
+          },
+          {
+            "id": 9,
+            "marca_id": 2,
+            "titulo": "Tráfico",
+            "valor_principal": "380",
+            "detalles": [
+              { "id": 19, "seccion_id": 9, "label": "Pagado",   "valor": "260" },
+              { "id": 20, "seccion_id": 9, "label": "Orgánico", "valor": "120" }
+            ]
+          }
+        ],
+        "metricas_simples": [
+          { "id": 4, "marca_id": 2, "label": "Tiempo", "valor": "900 min" },
+          { "id": 5, "marca_id": 2, "label": "Rebote", "valor": "45%" }
+        ]
+      },
+      {
+        "id": 3,
+        "reporte_id": 1,
+        "nombre": "Institucional",
+        "secciones": [
+          {
+            "id": 10,
+            "marca_id": 3,
+            "titulo": "Inversión",
+            "valor_principal": "S/.800",
+            "detalles": [
+              { "id": 21, "seccion_id": 10, "label": "Meta Ads",     "valor": "S/.300" },
+              { "id": 22, "seccion_id": 10, "label": "Google Ads",   "valor": "S/.300" },
+              { "id": 23, "seccion_id": 10, "label": "Linkedin Ads", "valor": "S/.200" }
+            ]
+          },
+          {
+            "id": 11,
+            "marca_id": 3,
+            "titulo": "Post social",
+            "valor_principal": "20",
+            "detalles": [
+              { "id": 24, "seccion_id": 11, "label": "Facebook",  "valor": "10" },
+              { "id": 25, "seccion_id": 11, "label": "Instagram", "valor": "10" }
+            ]
+          },
+          {
+            "id": 12,
+            "marca_id": 3,
+            "titulo": "Visitas",
+            "valor_principal": "12",
+            "detalles": [
+              { "id": 26, "seccion_id": 12, "label": "Nuevo",      "valor": "7" },
+              { "id": 27, "seccion_id": 12, "label": "Recurrente", "valor": "5" }
+            ]
+          },
+          {
+            "id": 13,
+            "marca_id": 3,
+            "titulo": "Tráfico",
+            "valor_principal": "200",
+            "detalles": [
+              { "id": 28, "seccion_id": 13, "label": "Pagado",   "valor": "140" },
+              { "id": 29, "seccion_id": 13, "label": "Orgánico", "valor": "60" }
+            ]
+          }
+        ],
+        "metricas_simples": [
+          { "id": 6, "marca_id": 3, "label": "Tiempo", "valor": "600 min" },
+          { "id": 7, "marca_id": 3, "label": "Rebote", "valor": "38%" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "empresa": "ADIUM PERÚ",
+    "mes": "Febrero",
+    "anio": 2026,
+    "links": [
+      { "id": 3, "reporte_id": 2, "label": "REPORTE SOCIAL",    "url": "#", "title": "Reporte social de febrero 2026" },
+      { "id": 4, "reporte_id": 2, "label": "REPORTE PLATAFORMA","url": "#", "title": "Reporte plataforma de febrero 2026" }
+    ],
+    "marcas": [
+      {
+        "id": 4,
+        "reporte_id": 2,
+        "nombre": "Adium Pro",
+        "secciones": [
+          {
+            "id": 14, "marca_id": 4, "titulo": "Inversión", "valor_principal": "S/.1800",
+            "detalles": [
+              { "id": 30, "seccion_id": 14, "label": "Meta Ads",     "valor": "S/.600" },
+              { "id": 31, "seccion_id": 14, "label": "Google Ads",   "valor": "S/.700" },
+              { "id": 32, "seccion_id": 14, "label": "Linkedin Ads", "valor": "S/.500" }
+            ]
+          },
+          {
+            "id": 15, "marca_id": 4, "titulo": "Post social", "valor_principal": "35",
+            "detalles": [
+              { "id": 33, "seccion_id": 15, "label": "Facebook",  "valor": "18" },
+              { "id": 34, "seccion_id": 15, "label": "Instagram", "valor": "17" }
+            ]
+          },
+          {
+            "id": 16, "marca_id": 4, "titulo": "Posts web", "valor_principal": "50",
+            "detalles": [
+              { "id": 35, "seccion_id": 16, "label": "Publicaciones", "valor": "22" },
+              { "id": 36, "seccion_id": 16, "label": "Cursos",        "valor": "28" }
+            ]
+          },
+          {
+            "id": 17, "marca_id": 4, "titulo": "Visitas", "valor_principal": "25",
+            "detalles": [
+              { "id": 37, "seccion_id": 17, "label": "Nuevo",      "valor": "14" },
+              { "id": 38, "seccion_id": 17, "label": "Recurrente", "valor": "11" }
+            ]
+          },
+          {
+            "id": 18, "marca_id": 4, "titulo": "Tráfico", "valor_principal": "510",
+            "detalles": [
+              { "id": 39, "seccion_id": 18, "label": "Pagado",   "valor": "370" },
+              { "id": 40, "seccion_id": 18, "label": "Orgánico", "valor": "140" }
+            ]
+          }
+        ],
+        "metricas_simples": [
+          { "id": 8,  "marca_id": 4, "label": "Tiempo",       "valor": "1400 min" },
+          { "id": 9,  "marca_id": 4, "label": "Rebote",       "valor": "37%" },
+          { "id": 10, "marca_id": 4, "label": "Conversiones", "valor": "12%" }
+        ]
+      },
+      {
+        "id": 5,
+        "reporte_id": 2,
+        "nombre": "Mi Salud es Hoy",
+        "secciones": [
+          {
+            "id": 19, "marca_id": 5, "titulo": "Inversión", "valor_principal": "S/.1600",
+            "detalles": [
+              { "id": 41, "seccion_id": 19, "label": "Meta Ads",     "valor": "S/.600" },
+              { "id": 42, "seccion_id": 19, "label": "Google Ads",   "valor": "S/.500" },
+              { "id": 43, "seccion_id": 19, "label": "Linkedin Ads", "valor": "S/.500" }
+            ]
+          },
+          {
+            "id": 20, "marca_id": 5, "titulo": "Post social", "valor_principal": "32",
+            "detalles": [
+              { "id": 44, "seccion_id": 20, "label": "Facebook",  "valor": "16" },
+              { "id": 45, "seccion_id": 20, "label": "Instagram", "valor": "16" }
+            ]
+          },
+          {
+            "id": 21, "marca_id": 5, "titulo": "Visitas", "valor_principal": "22",
+            "detalles": [
+              { "id": 46, "seccion_id": 21, "label": "Nuevo",      "valor": "13" },
+              { "id": 47, "seccion_id": 21, "label": "Recurrente", "valor": "9" }
+            ]
+          },
+          {
+            "id": 22, "marca_id": 5, "titulo": "Tráfico", "valor_principal": "410",
+            "detalles": [
+              { "id": 48, "seccion_id": 22, "label": "Pagado",   "valor": "280" },
+              { "id": 49, "seccion_id": 22, "label": "Orgánico", "valor": "130" }
+            ]
+          }
+        ],
+        "metricas_simples": [
+          { "id": 11, "marca_id": 5, "label": "Tiempo", "valor": "1050 min" },
+          { "id": 12, "marca_id": 5, "label": "Rebote", "valor": "42%" }
+        ]
+      },
+      {
+        "id": 6,
+        "reporte_id": 2,
+        "nombre": "Institucional",
+        "secciones": [
+          {
+            "id": 23, "marca_id": 6, "titulo": "Inversión", "valor_principal": "S/.800",
+            "detalles": [
+              { "id": 50, "seccion_id": 23, "label": "Meta Ads",     "valor": "S/.300" },
+              { "id": 51, "seccion_id": 23, "label": "Google Ads",   "valor": "S/.300" },
+              { "id": 52, "seccion_id": 23, "label": "Linkedin Ads", "valor": "S/.200" }
+            ]
+          },
+          {
+            "id": 24, "marca_id": 6, "titulo": "Post social", "valor_principal": "20",
+            "detalles": [
+              { "id": 53, "seccion_id": 24, "label": "Facebook",  "valor": "10" },
+              { "id": 54, "seccion_id": 24, "label": "Instagram", "valor": "10" }
+            ]
+          },
+          {
+            "id": 25, "marca_id": 6, "titulo": "Visitas", "valor_principal": "12",
+            "detalles": [
+              { "id": 55, "seccion_id": 25, "label": "Nuevo",      "valor": "7" },
+              { "id": 56, "seccion_id": 25, "label": "Recurrente", "valor": "5" }
+            ]
+          },
+          {
+            "id": 26, "marca_id": 6, "titulo": "Tráfico", "valor_principal": "200",
+            "detalles": [
+              { "id": 57, "seccion_id": 26, "label": "Pagado",   "valor": "140" },
+              { "id": 58, "seccion_id": 26, "label": "Orgánico", "valor": "60" }
+            ]
+          }
+        ],
+        "metricas_simples": [
+          { "id": 13, "marca_id": 6, "label": "Tiempo", "valor": "600 min" },
+          { "id": 14, "marca_id": 6, "label": "Rebote", "valor": "38%" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "empresa": "ADIUM PERÚ",
+    "mes": "Marzo",
+    "anio": 2026,
+    "links": [
+      { "id": 5, "reporte_id": 3, "label": "REPORTE SOCIAL",    "url": "#", "title": "Reporte social de marzo 2026" },
+      { "id": 6, "reporte_id": 3, "label": "REPORTE PLATAFORMA","url": "#", "title": "Reporte plataforma de marzo 2026" }
+    ],
+    "marcas": [
+      {
+        "id": 7,
+        "reporte_id": 3,
+        "nombre": "Adium Pro",
+        "secciones": [
+          {
+            "id": 27, "marca_id": 7, "titulo": "Inversión", "valor_principal": "S/.2000",
+            "detalles": [
+              { "id": 59, "seccion_id": 27, "label": "Meta Ads",     "valor": "S/.700" },
+              { "id": 60, "seccion_id": 27, "label": "Google Ads",   "valor": "S/.800" },
+              { "id": 61, "seccion_id": 27, "label": "Linkedin Ads", "valor": "S/.500" }
+            ]
+          },
+          {
+            "id": 28, "marca_id": 7, "titulo": "Post social", "valor_principal": "40",
+            "detalles": [
+              { "id": 62, "seccion_id": 28, "label": "Facebook",  "valor": "20" },
+              { "id": 63, "seccion_id": 28, "label": "Instagram", "valor": "20" }
+            ]
+          },
+          {
+            "id": 29, "marca_id": 7, "titulo": "Posts web", "valor_principal": "45",
+            "detalles": [
+              { "id": 64, "seccion_id": 29, "label": "Publicaciones", "valor": "20" },
+              { "id": 65, "seccion_id": 29, "label": "Cursos",        "valor": "25" }
+            ]
+          },
+          {
+            "id": 30, "marca_id": 7, "titulo": "Visitas", "valor_principal": "30",
+            "detalles": [
+              { "id": 66, "seccion_id": 30, "label": "Nuevo",      "valor": "18" },
+              { "id": 67, "seccion_id": 30, "label": "Recurrente", "valor": "12" }
+            ]
+          },
+          {
+            "id": 31, "marca_id": 7, "titulo": "Tráfico", "valor_principal": "600",
+            "detalles": [
+              { "id": 68, "seccion_id": 31, "label": "Pagado",   "valor": "420" },
+              { "id": 69, "seccion_id": 31, "label": "Orgánico", "valor": "180" }
+            ]
+          }
+        ],
+        "metricas_simples": [
+          { "id": 15, "marca_id": 7, "label": "Tiempo",       "valor": "1600 min" },
+          { "id": 16, "marca_id": 7, "label": "Rebote",       "valor": "35%" },
+          { "id": 17, "marca_id": 7, "label": "Conversiones", "valor": "14%" }
+        ]
+      },
+      {
+        "id": 8,
+        "reporte_id": 3,
+        "nombre": "Mi Salud es Hoy",
+        "secciones": [
+          {
+            "id": 32, "marca_id": 8, "titulo": "Inversión", "valor_principal": "S/.1600",
+            "detalles": [
+              { "id": 70, "seccion_id": 32, "label": "Meta Ads",     "valor": "S/.600" },
+              { "id": 71, "seccion_id": 32, "label": "Google Ads",   "valor": "S/.500" },
+              { "id": 72, "seccion_id": 32, "label": "Linkedin Ads", "valor": "S/.500" }
+            ]
+          },
+          {
+            "id": 33, "marca_id": 8, "titulo": "Post social", "valor_principal": "32",
+            "detalles": [
+              { "id": 73, "seccion_id": 33, "label": "Facebook",  "valor": "16" },
+              { "id": 74, "seccion_id": 33, "label": "Instagram", "valor": "16" }
+            ]
+          },
+          {
+            "id": 34, "marca_id": 8, "titulo": "Visitas", "valor_principal": "22",
+            "detalles": [
+              { "id": 75, "seccion_id": 34, "label": "Nuevo",      "valor": "13" },
+              { "id": 76, "seccion_id": 34, "label": "Recurrente", "valor": "9" }
+            ]
+          },
+          {
+            "id": 35, "marca_id": 8, "titulo": "Tráfico", "valor_principal": "410",
+            "detalles": [
+              { "id": 77, "seccion_id": 35, "label": "Pagado",   "valor": "280" },
+              { "id": 78, "seccion_id": 35, "label": "Orgánico", "valor": "130" }
+            ]
+          }
+        ],
+        "metricas_simples": [
+          { "id": 18, "marca_id": 8, "label": "Tiempo", "valor": "1050 min" },
+          { "id": 19, "marca_id": 8, "label": "Rebote", "valor": "42%" }
+        ]
+      },
+      {
+        "id": 9,
+        "reporte_id": 3,
+        "nombre": "Institucional",
+        "secciones": [
+          {
+            "id": 36, "marca_id": 9, "titulo": "Inversión", "valor_principal": "S/.800",
+            "detalles": [
+              { "id": 79, "seccion_id": 36, "label": "Meta Ads",     "valor": "S/.300" },
+              { "id": 80, "seccion_id": 36, "label": "Google Ads",   "valor": "S/.300" },
+              { "id": 81, "seccion_id": 36, "label": "Linkedin Ads", "valor": "S/.200" }
+            ]
+          },
+          {
+            "id": 37, "marca_id": 9, "titulo": "Post social", "valor_principal": "20",
+            "detalles": [
+              { "id": 82, "seccion_id": 37, "label": "Facebook",  "valor": "10" },
+              { "id": 83, "seccion_id": 37, "label": "Instagram", "valor": "10" }
+            ]
+          },
+          {
+            "id": 38, "marca_id": 9, "titulo": "Visitas", "valor_principal": "12",
+            "detalles": [
+              { "id": 84, "seccion_id": 38, "label": "Nuevo",      "valor": "7" },
+              { "id": 85, "seccion_id": 38, "label": "Recurrente", "valor": "5" }
+            ]
+          },
+          {
+            "id": 39, "marca_id": 9, "titulo": "Tráfico", "valor_principal": "200",
+            "detalles": [
+              { "id": 86, "seccion_id": 39, "label": "Pagado",   "valor": "140" },
+              { "id": 87, "seccion_id": 39, "label": "Orgánico", "valor": "60" }
+            ]
+          }
+        ],
+        "metricas_simples": [
+          { "id": 20, "marca_id": 9, "label": "Tiempo", "valor": "600 min" },
+          { "id": 21, "marca_id": 9, "label": "Rebote", "valor": "38%" }
+        ]
+      }
+    ]
+  }
+]
