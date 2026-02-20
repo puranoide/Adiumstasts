@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - Hybrid Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <style>
+        .custom-scroll::-webkit-scrollbar { height: 8px; }
+        .custom-scroll::-webkit-scrollbar-track { background: transparent; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+        .main-wrapper { max-width: 100vw; overflow: hidden; }
+        /* Clase para las tarjetas para mantener consistencia entre HTML y JS */
+        .card-style { min-width: 400px; background-color: white; border-radius: 2.5rem; padding: 2rem; border: 1px solid #f1f5f9; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
+        <div class="px-3 py-3 lg:px-5">
+            <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-blue-700 uppercase">Adium-faro-stats</span>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold">AD</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 px-6 main-wrapper">
+        <div class="flex gap-6 items-start">
+            
+            <section id="fixed-form-container">
+                <div class="min-w-[400px] bg-white rounded-[2.5rem] shadow-sm p-8 border border-gray-100 flex flex-col justify-between">
+                    <form id="metrics-input-form">
+                        <div class="flex justify-between items-start mb-8">
+                            <h2 class="text-2xl font-black text-slate-800 uppercase w-2/3 leading-tight">FACEBOOK</h2>
+                            <select name="month" class="bg-gray-50 border border-gray-300 text-sm rounded-lg p-1.5 focus:ring-blue-500">
+                                <option value="Enero">Enero</option>
+                                <option value="Febrero">Febrero</option>
+                            </select>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <span class="w-1/2 text-[13px] font-bold text-slate-700">Seguidores totales</span>
+                                <input type="number" name="followers" class="w-1/2 bg-gray-50 border-none text-sm rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500" placeholder="Agregar...">
+                            </div>
+                            
+                            <div class="flex items-center gap-4">
+                                <span class="w-1/2 text-[13px] font-bold text-slate-700"># seguidores del mes</span>
+                                <div class="w-1/2 flex gap-2">
+                                    <input type="number" name="monthly_followers" class="w-full bg-gray-50 border-none text-sm rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500" placeholder="0">
+                                    <input type="number" name="ads_followers" placeholder="ads" class="w-16 bg-gray-50 border-none text-xs rounded-xl p-2.5 text-center">
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <span class="w-1/2 text-[13px] font-bold text-slate-700">Visualizaciones</span>
+                                <input type="number" name="views" class="w-1/2 bg-gray-50 border-none text-sm rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500" placeholder="0">
+                            </div>
+
+                            <div class="mt-6">
+                                <button type="submit" class="w-full bg-blue-700 text-white font-bold py-3 rounded-xl hover:bg-blue-800 transition shadow-lg shadow-blue-200">
+                                    Guardar Registro
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <div id="scroll-container" class="custom-scroll flex gap-6 overflow-x-auto pb-6 snap-x w-full">
+                </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Registros históricos (JSON)
+        const historyData = [
+            { title: "FACEBOOK / Octubre-2025", stats: { followers: "305000", monthlyFollowers: "100", posts: "12", views: "15000", viewers: "8000", interactions: "200", clicks: "20", ads: "100" }, viewRate: "1200" },
+            { title: "FACEBOOK / Noviembre-2025", stats: { followers: "306500", monthlyFollowers: "1500", posts: "14", views: "18000", viewers: "9500", interactions: "250", clicks: "30", ads: "150" }, viewRate: "1350" },
+            { title: "FACEBOOK / Diciembre-2025", stats: { followers: "307750", monthlyFollowers: "-338", posts: "16", views: "23314", viewers: "11735", interactions: "314", clicks: "36", ads: "0" }, viewRate: "1457" },
+            { title: "FACEBOOK / Enero-2026", stats: { followers: "307399", monthlyFollowers: "-351", posts: "11", views: "340330", viewers: "174116", interactions: "14141", clicks: "565", ads: "549" }, viewRate: "30939" }
+        ];
+
+        const scrollDiv = document.getElementById('scroll-container');
+
+        // Función para renderizar solo el historial
+        function renderHistory() {
+            scrollDiv.innerHTML = '';
+            historyData.forEach((item) => {
+                const card = document.createElement('div');
+                card.className = "min-w-[400px] bg-white rounded-[2.5rem] shadow-sm p-8 border border-gray-100 flex flex-col justify-between snap-start";
+                
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start mb-8">
+                            <h2 class="text-2xl font-black text-slate-800 uppercase leading-tight">${item.title}</h2>
+                        </div>
+                        <div class="space-y-4">
+                            ${createRow("Seguidores totales", item.stats.followers)}
+                            ${createRow("# seguidores del mes", item.stats.monthlyFollowers, true)}
+                            ${createRow("# Posts (mes)", item.stats.posts)}
+                            ${createRow("Visualizaciones", item.stats.views)}
+                            ${createRow("Espectadores", item.stats.viewers, true)}
+                            ${createRow("Interacciones", item.stats.interactions, true)}
+                            ${createRow("Clicks en enlace", item.stats.clicks, true)}
+                            ${createRow("Inversión Publicitaria", item.stats.ads)}
+                        </div>
+                    </div>
+                    ${item.viewRate ? `<div class="mt-8 bg-[#D9F2B1] text-right p-3 rounded-xl font-bold text-slate-700">View Rate: ${item.viewRate}</div>` : ''}
+                `;
+                scrollDiv.appendChild(card);
+            });
+
+            // Focus al último
+            setTimeout(() => {
+                scrollDiv.scrollTo({ left: scrollDiv.scrollWidth, behavior: 'smooth' });
+            }, 300);
+        }
+
+        function createRow(label, value, hasAds = false) {
+            return `
+            <div class="flex items-center gap-4">
+                <span class="w-1/2 text-[13px] font-bold text-slate-700">${label}</span>
+                <div class="w-1/2 flex gap-2">
+                    <input type="text" value="${value || ''}" class="w-full bg-gray-50 border-none text-sm rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500" readonly>
+                    ${hasAds ? `<input type="text" placeholder="ads" value="0" class="w-16 bg-gray-50 border-none text-xs rounded-xl p-2.5 text-center" readonly>` : ''}
+                </div>
+            </div>`;
+        }
+
+        // Manejo del formulario (Para cuando conectes backend)
+        document.getElementById('metrics-input-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log("Datos listos para enviar al backend");
+            // Aquí harías tu fetch()
+        });
+
+        renderHistory();
+    </script>
+</body>
+</html>
