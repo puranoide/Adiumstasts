@@ -28,8 +28,7 @@ buttonsalir.addEventListener("click", () => {
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      console.log("Redireccionando a ../index.php");
-      window.location.href = "../index.php";
+      window.location.href = "index.html";
     })
     .catch(error => {
       console.error('Error:', error);
@@ -56,10 +55,8 @@ function login(usuario, contrasena) {
         message.textContent = "ingresando...";
         if (data.success) {
             console.log("Login exitoso");
-            message.textContent = "login exitoso";
-            message.classList.add("success");
             // Redirigir a la página de inicio
-                window.location.href = "index.html";
+                window.location.href = "dashboard.php";
             
             
         } else {
