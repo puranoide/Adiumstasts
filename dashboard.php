@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['nombre'])) {
-    header("Location:../index.php");
+    header("Location:https://lightskyblue-dunlin-466295.hostingersite.com/adiumplataform/index.html");
     exit();
 }
 ?>
