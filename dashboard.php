@@ -365,9 +365,9 @@ if (!isset($_SESSION['nombre'])) {
 
         </div>
     </main>
-
-    <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/auth.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+
 
 </body>
 

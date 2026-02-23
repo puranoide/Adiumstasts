@@ -1,5 +1,6 @@
 const websiteroot = "https://lightskyblue-dunlin-466295.hostingersite.com/";
 const urlbackend = "controllers/";
+console.log("auth.js funcionando");
 var loginButton = document.getElementById("login");
 var usuario= document.getElementById("usuario");
 var contrasena= document.getElementById("contrasena");
