@@ -6,6 +6,9 @@ var usuario= document.getElementById("usuario");
 var contrasena= document.getElementById("contrasena");
 var message = document.getElementById("message");
 //un lenguaje de eventos
+if (loginButton === null) {
+    return;
+}
 loginButton.addEventListener("click", function() {
     //login(email.value, password.value);
     event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
