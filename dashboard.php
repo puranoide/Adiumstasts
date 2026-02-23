@@ -11,7 +11,7 @@ if (!isset($_SESSION['nombre'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics Dashboard - Hybrid Layout</title>
+    <title>Analytics Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
     .custom-scroll::-webkit-scrollbar {
@@ -62,6 +62,7 @@ if (!isset($_SESSION['nombre'])) {
                 <div
                     class="min-w-[400px] bg-white rounded-[2.5rem] shadow-sm p-8 border border-gray-100 flex flex-col justify-between">
                     <form id="metrics-input-form" class="p-4">
+
                         <div class="flex flex-col mb-8">
                             <h2 class="text-2xl font-black text-slate-800 uppercase leading-tight">ADIUM PERÚ</h2>
                             <div class="mt-4">
@@ -92,271 +93,396 @@ if (!isset($_SESSION['nombre'])) {
                                 name="link_reporte_plataforma" placeholder="REPORTE PLATAFORMA">
                         </div>
 
-                        <div class="flex flex-col gap-4">
+                        <hr class="mb-6 border-gray-100">
+
+                        <!-- ══════════════════════════════════════════ -->
+                        <!-- ADIUM PRO -->
+                        <!-- ══════════════════════════════════════════ -->
+                        <div class="flex flex-col gap-4 mb-8">
                             <span class="text-[13px] font-bold text-slate-800 uppercase">Adium Pro</span>
+
+                            <!-- Inversión -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Inversión</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Meta Ads</label><input
-                                        type="number" name="adium_metaads"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Google Ads</label><input
-                                        type="number" name="adium_googleads"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Linkedin Ads</label><input
-                                        type="number" name="adium_lkads"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
+                                        Inversión</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Meta Ads</label>
+                                            <input type="number" name="adium_metaads"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Google Ads</label>
+                                            <input type="number" name="adium_googleads"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">LinkedIn
+                                                Ads</label>
+                                            <input type="number" name="adium_lkads"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Post social -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Posts social</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Facebook</label><input
-                                        type="number" name="adium_social_facebook"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Instagram</label><input
-                                        type="number" name="adium_social_instagram"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Linkedin</label><input
-                                        type="number" name="adium_social_lk"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">Post
+                                        social</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Facebook</label>
+                                            <input type="number" name="adium_social_facebook"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Instagram</label>
+                                            <input type="number" name="adium_social_instagram"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">LinkedIn</label>
+                                            <input type="number" name="adium_social_lk"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Posts web -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Posts web</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Publicaciones</label><input
-                                        type="number" name="adium_web_publicaciones"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Cursos</label><input
-                                        type="number" name="adium_web_cursos"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">Posts
+                                        web</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label
+                                                class="text-[13px] text-slate-600 w-32 text-right">Publicaciones</label>
+                                            <input type="number" name="adium_web_publicaciones"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Cursos</label>
+                                            <input type="number" name="adium_web_cursos"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Visitas -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Visitas</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Nuevo</label><input
-                                        type="number" name="adium_visitas_nuevo"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Recurrente</label><input
-                                        type="number" name="adium_visitas_recurente"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
+                                        Visitas</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Nuevo</label>
+                                            <input type="number" name="adium_visitas_nuevo"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Recurrente</label>
+                                            <input type="number" name="adium_visitas_recurente"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Tráfico -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Tráfico</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Pagado</label><input
-                                        type="number" name="adium_trafico_pagado"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Orgánico</label><input
-                                        type="number" name="adium_trafico_organico"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
+                                        Tráfico</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Pagado</label>
+                                            <input type="number" name="adium_trafico_pagado"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Orgánico</label>
+                                            <input type="number" name="adium_trafico_organico"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
-                            <div class="flex flex-col gap-2 ml-0 mt-2">
-                                <div class="flex items-center gap-4"><label
-                                        class="text-[13px] font-bold text-slate-700 w-40 text-left">Tiempo</label><input
-                                        type="number" name="adium_tiempo"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
+
+                            <!-- Métricas simples -->
+                            <div class="flex flex-col gap-2 ml-0 mt-1">
+                                <div class="flex items-center gap-4">
+                                    <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Tiempo</label>
+                                    <input type="number" name="adium_tiempo"
+                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                 </div>
-                                <div class="flex items-center gap-4"><label
-                                        class="text-[13px] font-bold text-slate-700 w-40 text-left">Rebote</label><input
-                                        type="number" name="adium_rebote"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
+                                <div class="flex items-center gap-4">
+                                    <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Rebote</label>
+                                    <input type="number" name="adium_rebote"
+                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                 </div>
-                                <div class="flex items-center gap-4"><label
-                                        class="text-[13px] font-bold text-slate-700 w-40 text-left">Conversiones</label><input
-                                        type="number" name="adium_conversiones"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
+                                <div class="flex items-center gap-4">
+                                    <label
+                                        class="text-[13px] font-bold text-slate-700 w-40 text-left">Conversiones</label>
+                                    <input type="number" name="adium_conversiones"
+                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                 </div>
                             </div>
                         </div>
 
-                        <br>
+                        <hr class="my-4 border-gray-100">
 
-                        <div class="flex flex-col gap-4">
+                        <!-- ══════════════════════════════════════════ -->
+                        <!-- MI SALUD ES HOY -->
+                        <!-- ══════════════════════════════════════════ -->
+                        <div class="flex flex-col gap-4 mb-8">
                             <span class="text-[13px] font-bold text-slate-800 uppercase">Mi Salud es Hoy</span>
+
+                            <!-- Inversión -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Inversión</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Meta Ads</label><input
-                                        type="number" name="mseh_inversion_metaads"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Google Ads</label><input
-                                        type="number" name="mseh_googleads"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Linkedin Ads</label><input
-                                        type="number" name="mesh_lkads"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
+                                        Inversión</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Meta Ads</label>
+                                            <input type="number" name="mseh_inversion_metaads"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Google Ads</label>
+                                            <input type="number" name="mseh_googleads"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">LinkedIn
+                                                Ads</label>
+                                            <!-- CORREGIDO: era mesh_lkads → mseh_lkads -->
+                                            <input type="number" name="mseh_lkads"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Post social -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Posts social</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Facebook</label><input
-                                        type="number" name="mseh_social_facebook"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Instagram</label><input
-                                        type="number" name="mseh_social_instagram"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">LinkedIn</label><input
-                                        type="number" name="mseh_social_lk"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>                                
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">Post
+                                        social</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Facebook</label>
+                                            <input type="number" name="mseh_social_facebook"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Instagram</label>
+                                            <input type="number" name="mseh_social_instagram"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">LinkedIn</label>
+                                            <input type="number" name="mseh_social_lk"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Posts web -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Posts web</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Entiende tu
-                                        enfermedad</label><input type="number" name="mseh_web_ete"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Viviendo tu
-                                        enfermedad</label><input type="number" name="mseh_web_vtv"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">Posts
+                                        web</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Entiende tu
+                                                enfermedad</label>
+                                            <input type="number" name="mseh_web_ete"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Viviendo tu
+                                                enfermedad</label>
+                                            <!-- CORREGIDO: era mseh_web_vtv → mseh_web_vte -->
+                                            <input type="number" name="mseh_web_vte"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Visitas -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Visitas</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Nuevo</label><input
-                                        type="number" name="mseh_visitas_nuevo"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Recurrente</label><input
-                                        type="number" name="mseh_visitas_recurrente"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
+                                        Visitas</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Nuevo</label>
+                                            <input type="number" name="mseh_visitas_nuevo"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Recurrente</label>
+                                            <input type="number" name="mseh_visitas_recurrente"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Tráfico -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Tráfico</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Pagado</label><input
-                                        type="number" name="mesh_trafico_pagado"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Orgánico</label><input
-                                        type="number" name="mseh_trafico_organico"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
+                                        Tráfico</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Pagado</label>
+                                            <!-- CORREGIDO: era mesh_trafico_pagado → mseh_trafico_pagado -->
+                                            <input type="number" name="mseh_trafico_pagado"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Orgánico</label>
+                                            <input type="number" name="mseh_trafico_organico"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
-                            <div class="flex flex-col gap-2 ml-0 mt-2">
-                                <div class="flex items-center gap-4"><label
-                                        class="text-[13px] font-bold text-slate-700 w-40 text-left">Tiempo</label><input
-                                        type="number" name="mseh_tiempo"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
+
+                            <!-- Métricas simples -->
+                            <div class="flex flex-col gap-2 ml-0 mt-1">
+                                <div class="flex items-center gap-4">
+                                    <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Tiempo</label>
+                                    <input type="number" name="mseh_tiempo"
+                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                 </div>
-                                <div class="flex items-center gap-4"><label
-                                        class="text-[13px] font-bold text-slate-700 w-40 text-left">Rebote</label><input
-                                        type="number" name="mseh_rebote"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
+                                <div class="flex items-center gap-4">
+                                    <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Rebote</label>
+                                    <input type="number" name="mseh_rebote"
+                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                 </div>
                             </div>
                         </div>
 
-                        <br>
+                        <hr class="my-4 border-gray-100">
 
+                        <!-- ══════════════════════════════════════════ -->
+                        <!-- INSTITUCIONAL -->
+                        <!-- ══════════════════════════════════════════ -->
                         <div class="flex flex-col gap-4">
                             <span class="text-[13px] font-bold text-slate-800 uppercase">Institucional</span>
+
+                            <!-- Inversión -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Inversión</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Meta Ads</label><input
-                                        type="number" name="insti_metaads"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Google Ads</label><input
-                                        type="number" name="insti_googleads"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Linkedin Ads</label><input
-                                        type="number" name="insti_lkads"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
+                                        Inversión</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Meta Ads</label>
+                                            <input type="number" name="insti_metaads"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Google Ads</label>
+                                            <input type="number" name="insti_googleads"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">LinkedIn
+                                                Ads</label>
+                                            <input type="number" name="insti_lkads"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Post social -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Posts social</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Facebook</label><input
-                                        type="number" name="insti_social_facebook"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Instagram</label><input
-                                        type="number" name="insti_social_instagram"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">linkedin</label><input
-                                        type="number" name="insti_social_lk"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">Post
+                                        social</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Facebook</label>
+                                            <input type="number" name="insti_social_facebook"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Instagram</label>
+                                            <input type="number" name="insti_social_instagram"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">LinkedIn</label>
+                                            <input type="number" name="insti_social_lk"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Visitas -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Visitas</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Nuevo</label><input
-                                        type="number" name="insti_visitas_nuevo"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Recurrente</label><input
-                                        type="number" name="insti_visitas_recurrente"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
+                                        Visitas</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Nuevo</label>
+                                            <input type="number" name="insti_visitas_nuevo"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Recurrente</label>
+                                            <input type="number" name="insti_visitas_recurrente"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
+
+                            <!-- Tráfico -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <span class="text-[13px] font-bold text-slate-700">Tráfico</span>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Pagado</label><input
-                                        type="number" name="insti_trafico_pagado"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
-                                <div class="flex items-center gap-4 ml-4"><label
-                                        class="text-[13px] text-slate-600 w-32 text-right">Orgánico</label><input
-                                        type="number" name="insti_trafico_organico"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
-                                </div>
+                                <details class="bg-white rounded-lg" open>
+                                    <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
+                                        Tráfico</summary>
+                                    <div class="flex flex-col gap-3 ml-4 mt-3">
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Pagado</label>
+                                            <input type="number" name="insti_trafico_pagado"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <label class="text-[13px] text-slate-600 w-32 text-right">Orgánico</label>
+                                            <input type="number" name="insti_trafico_organico"
+                                                class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                        </div>
+                                    </div>
+                                </details>
                             </div>
-                            <div class="flex flex-col gap-2 ml-0 mt-2">
-                                <div class="flex items-center gap-4"><label
-                                        class="text-[13px] font-bold text-slate-700 w-40 text-left">Tiempo</label><input
-                                        type="number" name="insti_tiempo"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
+
+                            <!-- Métricas simples -->
+                            <div class="flex flex-col gap-2 ml-0 mt-1">
+                                <div class="flex items-center gap-4">
+                                    <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Tiempo</label>
+                                    <input type="number" name="insti_tiempo"
+                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                 </div>
-                                <div class="flex items-center gap-4"><label
-                                        class="text-[13px] font-bold text-slate-700 w-40 text-left">Rebote</label><input
-                                        type="number" name="insti_rebote"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
+                                <div class="flex items-center gap-4">
+                                    <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Rebote</label>
+                                    <input type="number" name="insti_rebote"
+                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                 </div>
                             </div>
                         </div>

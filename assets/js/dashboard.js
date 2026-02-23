@@ -47,7 +47,7 @@ function insertarDatos(data) {
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
-      location.reload();
+      //location.reload();
     })
     .catch((error) => {
       console.error("Error al insertar datos:", error);
@@ -173,7 +173,7 @@ function mapBackendToCard(d) {
                     },
                     {
                         titulo: "Tráfico",
-                        valorPrincipal: +d.mesh_trafico_pagado + +d.mseh_trafico_organico,
+                        valorPrincipal: +d.mseh_trafico_pagado + +d.mseh_trafico_organico,
                         detalles: [
                             { label: "Pagado",   valor: d.mesh_trafico_pagado },
                             { label: "Orgánico", valor: d.mseh_trafico_organico },
