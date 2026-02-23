@@ -15,7 +15,7 @@ buttonsalir.addEventListener("click", () => {
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      window.location.href = websiteroot + "index.html";
+      window.location.href = websiteroot + "/index.html";
     })
     .catch(error => {
       console.error('Error:', error);
