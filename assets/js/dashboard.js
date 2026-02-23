@@ -96,7 +96,7 @@ function mapBackendToCard(d) {
                     },
                     {
                         titulo: "Post social",
-                        valorPrincipal: +d.adium_social_facebook + +d.adium_social_instagram+d.adium_social_lk,
+                        valorPrincipal: +d.adium_social_facebook + +d.adium_social_instagram+ +d.adium_social_lk,
                         detalles: [
                             { label: "Facebook",  valor: d.adium_social_facebook },
                             { label: "Instagram", valor: d.adium_social_instagram },
@@ -148,7 +148,7 @@ function mapBackendToCard(d) {
                     },
                     {
                         titulo: "Post social",
-                        valorPrincipal: +d.mseh_social_facebook + +d.mseh_social_instagram+d.mseh_social_lk,
+                        valorPrincipal: +d.mseh_social_facebook + +d.mseh_social_instagram+ +d.mseh_social_lk,
                         detalles: [
                             { label: "Facebook",  valor: d.mseh_social_facebook },
                             { label: "Instagram", valor: d.mseh_social_instagram },
@@ -199,7 +199,7 @@ function mapBackendToCard(d) {
                     },
                     {
                         titulo: "Post social",
-                        valorPrincipal: +d.insti_social_facebook + +d.insti_social_instagram+d.insti_social_lk,
+                        valorPrincipal: +d.insti_social_facebook + +d.insti_social_instagram+ +d.insti_social_lk,
                         detalles: [
                             { label: "Facebook",  valor: d.insti_social_facebook },
                             { label: "Instagram", valor: d.insti_social_instagram },
