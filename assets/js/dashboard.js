@@ -1,5 +1,5 @@
 const urlbackend = "controllers/";
-
+const websiteroot = "https://lightskyblue-dunlin-466295.hostingersite.com/";
 const buttonsalir = document.getElementById("logout");
 buttonsalir.addEventListener("click", () => {
   event.preventDefault(); // Evita que el formulario se envíe
