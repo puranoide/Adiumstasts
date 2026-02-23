@@ -4,7 +4,6 @@ console.log("auth.js funcionando");
 var loginButton = document.getElementById("login");
 var usuario= document.getElementById("usuario");
 var contrasena= document.getElementById("contrasena");
-var message = document.getElementById("message");
 //un lenguaje de eventos
 if (loginButton === null) {
     return;
@@ -65,8 +64,7 @@ function login(usuario, contrasena) {
             
         } else {
             console.log("Error al iniciar sesión");
-            message.textContent = "login fallido,intentelo de nuevo";
-            message.classList.add("error");
+
         }
     })
     .catch(error => {
