@@ -302,6 +302,7 @@ function renderCard(data) {
 // RENDERIZAR TODOS LOS CARDS
 // ─────────────────────────────────────────────
 function renderAllCards(registrosBackend) {
+    console.log(registrosBackend);
     const container = document.getElementById('scroll-container');
     // Mapear cada objeto plano → estructura de card → HTML
     const cardsHtml = registrosBackend
