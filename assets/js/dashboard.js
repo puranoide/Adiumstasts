@@ -175,7 +175,7 @@ function mapBackendToCard(d) {
                         titulo: "Tráfico",
                         valorPrincipal: +d.mseh_trafico_pagado + +d.mseh_trafico_organico,
                         detalles: [
-                            { label: "Pagado",   valor: d.mesh_trafico_pagado },
+                            { label: "Pagado",   valor: d.mseh_trafico_pagado },
                             { label: "Orgánico", valor: d.mseh_trafico_organico },
                         ]
                     },
