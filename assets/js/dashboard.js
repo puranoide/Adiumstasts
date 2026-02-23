@@ -1,4 +1,29 @@
 const urlbackend = "controllers/";
+
+const buttonsalir = document.getElementById("logout");
+buttonsalir.addEventListener("click", () => {
+  event.preventDefault(); // Evita que el formulario se envíe
+  fetch(urlbackend + "auth.php", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      action: 'logout'
+    })
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      window.location.href = websiteroot + "index.html";
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  return false; // Evita que el formulario se envíe
+});
+
+
 const formulario = document.getElementById("metrics-input-form");
 formulario.addEventListener("submit", function (event) {
   event.preventDefault();

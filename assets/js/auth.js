@@ -5,9 +5,6 @@ var loginButton = document.getElementById("login");
 var usuario= document.getElementById("usuario");
 var contrasena= document.getElementById("contrasena");
 //un lenguaje de eventos
-if (loginButton === null) {
-    return;
-}
 loginButton.addEventListener("click", function() {
     //login(email.value, password.value);
     event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
@@ -15,29 +12,6 @@ loginButton.addEventListener("click", function() {
     console.log(usuario.value);
     console.log(contrasena.value);
     login(usuario.value, contrasena.value);
-});
-
-const buttonsalir = document.getElementById("logout");
-buttonsalir.addEventListener("click", () => {
-  event.preventDefault(); // Evita que el formulario se envíe
-  fetch(urlbackend + "auth.php", {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      action: 'logout'
-    })
-  })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      window.location.href = websiteroot + "index.html";
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  return false; // Evita que el formulario se envíe
 });
 
 function login(usuario, contrasena) {
