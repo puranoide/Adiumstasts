@@ -14,23 +14,23 @@ if (!isset($_SESSION['nombre'])) {
     <title>Analytics Dashboard - Hybrid Layout</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .custom-scroll::-webkit-scrollbar {
-            height: 8px;
-        }
+    .custom-scroll::-webkit-scrollbar {
+        height: 8px;
+    }
 
-        .custom-scroll::-webkit-scrollbar-track {
-            background: transparent;
-        }
+    .custom-scroll::-webkit-scrollbar-track {
+        background: transparent;
+    }
 
-        .custom-scroll::-webkit-scrollbar-thumb {
-            background: #d1d5db;
-            border-radius: 10px;
-        }
+    .custom-scroll::-webkit-scrollbar-thumb {
+        background: #d1d5db;
+        border-radius: 10px;
+    }
 
-        .main-wrapper {
-            max-width: 100vw;
-            overflow: hidden;
-        }
+    .main-wrapper {
+        max-width: 100vw;
+        overflow: hidden;
+    }
     </style>
 </head>
 
@@ -46,8 +46,7 @@ if (!isset($_SESSION['nombre'])) {
 
                 <div class="flex items-center gap-3">
                     <button type="button" id="logout"
-                        class="w-12 h-8 rounded-full bg-red-600 flex items-center justify-center text-white text-xs font-bold"
-                        >
+                        class="w-12 h-8 rounded-full bg-red-600 flex items-center justify-center text-white text-xs font-bold">
                         Salir
                     </button>
                 </div>
@@ -123,6 +122,11 @@ if (!isset($_SESSION['nombre'])) {
                                 <div class="flex items-center gap-4 ml-4"><label
                                         class="text-[13px] text-slate-600 w-32 text-right">Instagram</label><input
                                         type="number" name="adium_social_instagram"
+                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
+                                </div>
+                                <div class="flex items-center gap-4 ml-4"><label
+                                        class="text-[13px] text-slate-600 w-32 text-right">Linkedin</label><input
+                                        type="number" name="adium_social_lk"
                                         class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
                                 </div>
                             </div>
@@ -218,6 +222,11 @@ if (!isset($_SESSION['nombre'])) {
                                         type="number" name="mseh_social_instagram"
                                         class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
                                 </div>
+                                <div class="flex items-center gap-4 ml-4"><label
+                                        class="text-[13px] text-slate-600 w-32 text-right">LinkedIn</label><input
+                                        type="number" name="mseh_social_lk"
+                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
+                                </div>                                
                             </div>
                             <div class="flex flex-col gap-2 ml-4">
                                 <span class="text-[13px] font-bold text-slate-700">Posts web</span>
@@ -304,6 +313,11 @@ if (!isset($_SESSION['nombre'])) {
                                 <div class="flex items-center gap-4 ml-4"><label
                                         class="text-[13px] text-slate-600 w-32 text-right">Instagram</label><input
                                         type="number" name="insti_social_instagram"
+                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
+                                </div>
+                                <div class="flex items-center gap-4 ml-4"><label
+                                        class="text-[13px] text-slate-600 w-32 text-right">linkedin</label><input
+                                        type="number" name="insti_social_lk"
                                         class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none" />
                                 </div>
                             </div>
