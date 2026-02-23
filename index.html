@@ -1,68 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Flowbite + JS Vanilla</title>
+    <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 </head>
+
 <body class="bg-gray-50 flex items-center justify-center h-screen">
-
-<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8">
-    <form id="loginForm" class="space-y-6">
-        <h5 class="text-xl font-medium text-gray-900">Iniciar sesión</h5>
-        
-        <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Tu email</label>
-            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="nombre@empresa.com" required>
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
+        <div class="px-3 py-3 lg:px-5">
+            <div class="flex items-center justify-between">
+                <div id="logoytexto" class="flex items-center gap-2">
+                    <img src="assets/img/logo_faro_avif.avif" alt="" class="w-16 h-16">
+                    <span class="text-xl font-bold text-blue-700 uppercase">Adium-faro-stats</span>
+                </div>
+            </div>
         </div>
+    </nav>
+    <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8">
+        <form id="loginForm" class="space-y-6">
+            <h5 class="text-xl font-medium text-gray-900">Usuario</h5>
 
-        <div>
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Tu contraseña</label>
-            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
-        </div>
+            <div>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900">usuario</label>
+                <input type="text" name="usuario" id="usuario"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="nombre@empresa.com" required>
+            </div>
 
-        <div id="errorMessage" class="hidden p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
-            <span class="font-medium">¡Error!</span> Credenciales incorrectas.
-        </div>
+            <div>
+                <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Tu contraseña</label>
+                <input type="password" name="contrasena" id="password" placeholder="••••••••"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    required>
+            </div>
 
-        <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Entrar a tu cuenta</button>
-    </form>
-</div>
+            <div id="errorMessage" class="hidden p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                <span class="font-medium">¡Error!</span> Credenciales incorrectas.
+            </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+            <button type="submit"
+            id="login"
+                class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Entrar
+                a tu cuenta</button>
+        </form>
+    </div>
 
-<script>
-    // 1. Simulamos nuestra "base de datos" JSON
-    const mockUsers = [
-        { "email": "admin@test.com", "password": "123", "name": "Administrador" },
-        { "email": "usuario@test.com", "password": "password", "name": "Juan Pérez" }
-    ];
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-    const loginForm = document.getElementById('loginForm');
-    const errorMessage = document.getElementById('errorMessage');
-
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Evita que la página se recargue
-
-        // 2. Capturamos los datos del formulario
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-
-        // 3. Lógica de validación con el "JSON"
-        const user = mockUsers.find(u => u.email === email && u.password === password);
-
-        if (user) {
-            errorMessage.classList.add('hidden');
-            alert(`¡Bienvenido de nuevo, ${user.name}!`);
-            // Aquí podrías usar: window.location.href = 'dashboard.html';
-        } else {
-            // Mostramos el mensaje de error de Flowbite
-            errorMessage.classList.remove('hidden');
-        }
-    });
-</script>
+    <script src="assets/js/auth.js"></script>
 
 </body>
+
 </html>
