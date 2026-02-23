@@ -52,7 +52,6 @@ function login(usuario, contrasena) {
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        message.textContent = "ingresando...";
         if (data.success) {
             console.log("Login exitoso");
             // Redirigir a la página de inicio
