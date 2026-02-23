@@ -1,3 +1,4 @@
+const websiteroot = "https://lightskyblue-dunlin-466295.hostingersite.com/";
 const urlbackend = "controllers/";
 var loginButton = document.getElementById("login");
 var usuario= document.getElementById("usuario");
@@ -28,7 +29,7 @@ buttonsalir.addEventListener("click", () => {
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      window.location.href = "index.html";
+      window.location.href = websiteroot + "index.html";
     })
     .catch(error => {
       console.error('Error:', error);
