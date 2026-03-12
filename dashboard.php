@@ -109,18 +109,18 @@ if (!isset($_SESSION['nombre'])) {
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
                                         <div class="flex items-center gap-4">
                                             <label class="text-[13px] text-slate-600 w-32 text-right">Meta Ads</label>
-                                            <input type="number" name="adium_metaads"
+                                            <input type="number" name="adium_metaads" step="any"
                                                 class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                         </div>
                                         <div class="flex items-center gap-4">
                                             <label class="text-[13px] text-slate-600 w-32 text-right">Google Ads</label>
-                                            <input type="number" name="adium_googleads"
+                                            <input type="number" name="adium_googleads" step="any"
                                                 class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                         </div>
                                         <div class="flex items-center gap-4">
                                             <label class="text-[13px] text-slate-600 w-32 text-right">LinkedIn
                                                 Ads</label>
-                                            <input type="number" name="adium_lkads"
+                                            <input type="number" name="adium_lkads" step="any"
                                                 class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                         </div>
                                     </div>
@@ -217,12 +217,16 @@ if (!isset($_SESSION['nombre'])) {
                             <div class="flex flex-col gap-2 ml-0 mt-1">
                                 <div class="flex items-center gap-4">
                                     <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Tiempo</label>
-                                    <input type="number" name="adium_tiempo"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+                                    <div class="flex w-40">
+                                        <input type="number" name="adium_tiempo" placeholder="Min"
+                                            class="w-1/2 bg-white border border-gray-400 text-xs rounded-l-lg p-1 outline-none text-center" />
+                                        <input type="number" name="adium_tiempo_segundos" placeholder="Seg"
+                                            class="w-1/2 bg-white border border-gray-400 text-xs rounded-r-lg p-1 outline-none text-center" />
+                                    </div>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Rebote</label>
-                                    <input type="number" name="adium_rebote"
+                                    <input type="number" name="adium_rebote" step="any"
                                         class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                 </div>
                                 <div class="flex items-center gap-4">
@@ -250,19 +254,19 @@ if (!isset($_SESSION['nombre'])) {
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
                                         <div class="flex items-center gap-4">
                                             <label class="text-[13px] text-slate-600 w-32 text-right">Meta Ads</label>
-                                            <input type="number" name="mseh_inversion_metaads"
+                                            <input type="number" name="mseh_inversion_metaads" step="any"
                                                 class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                         </div>
                                         <div class="flex items-center gap-4">
                                             <label class="text-[13px] text-slate-600 w-32 text-right">Google Ads</label>
-                                            <input type="number" name="mseh_googleads"
+                                            <input type="number" name="mseh_googleads" step="any"
                                                 class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                         </div>
                                         <div class="flex items-center gap-4">
                                             <label class="text-[13px] text-slate-600 w-32 text-right">LinkedIn
                                                 Ads</label>
                                             <!-- CORREGIDO: era mesh_lkads → mseh_lkads -->
-                                            <input type="number" name="mseh_lkads"
+                                            <input type="number" name="mseh_lkads" step="any"
                                                 class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                         </div>
                                     </div>
@@ -362,12 +366,19 @@ if (!isset($_SESSION['nombre'])) {
                             <div class="flex flex-col gap-2 ml-0 mt-1">
                                 <div class="flex items-center gap-4">
                                     <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Tiempo</label>
-                                    <input type="number" name="mseh_tiempo"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+
+                                    <div class="flex w-40">
+                                        <input type="number" name="mseh_tiempo" placeholder="Min"
+                                            class="w-1/2 bg-white border border-gray-400 border-r-0 text-xs rounded-l-lg p-1 outline-none text-center" />
+
+                                        <input type="number" name="mseh_tiempo_segundos" placeholder="Seg"
+                                            class="w-1/2 bg-white border border-gray-400 text-xs rounded-r-lg p-1 outline-none text-center" />
+                                    </div>
                                 </div>
+
                                 <div class="flex items-center gap-4">
                                     <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Rebote</label>
-                                    <input type="number" name="mseh_rebote"
+                                    <input type="number" name="mseh_rebote" step="any"
                                         class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                 </div>
                             </div>
@@ -389,18 +400,18 @@ if (!isset($_SESSION['nombre'])) {
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
                                         <div class="flex items-center gap-4">
                                             <label class="text-[13px] text-slate-600 w-32 text-right">Meta Ads</label>
-                                            <input type="number" name="insti_metaads"
+                                            <input type="number" name="insti_metaads" step="any"
                                                 class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                         </div>
                                         <div class="flex items-center gap-4">
                                             <label class="text-[13px] text-slate-600 w-32 text-right">Google Ads</label>
-                                            <input type="number" name="insti_googleads"
+                                            <input type="number" name="insti_googleads" step="any"
                                                 class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                         </div>
                                         <div class="flex items-center gap-4">
                                             <label class="text-[13px] text-slate-600 w-32 text-right">LinkedIn
                                                 Ads</label>
-                                            <input type="number" name="insti_lkads"
+                                            <input type="number" name="insti_lkads" step="any"
                                                 class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                         </div>
                                     </div>
@@ -476,12 +487,19 @@ if (!isset($_SESSION['nombre'])) {
                             <div class="flex flex-col gap-2 ml-0 mt-1">
                                 <div class="flex items-center gap-4">
                                     <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Tiempo</label>
-                                    <input type="number" name="insti_tiempo"
-                                        class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
+
+                                    <div class="flex w-40">
+                                        <input type="number" name="insti_tiempo" placeholder="Min"
+                                            class="w-1/2 bg-white border border-gray-400 text-xs rounded-l-lg p-1 outline-none text-center" />
+                                        <input type="number" name="insti_tiempo_segundos" placeholder="Seg"
+                                            class="w-1/2 bg-white border border-gray-400 text-xs rounded-r-lg p-1 outline-none text-center" />
+                                    </div>
+
+
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <label class="text-[13px] font-bold text-slate-700 w-40 text-left">Rebote</label>
-                                    <input type="number" name="insti_rebote"
+                                    <input type="number" name="insti_rebote" step="any"
                                         class="w-40 bg-white border border-gray-400 text-xs rounded-lg p-1 outline-none text-center" />
                                 </div>
                             </div>

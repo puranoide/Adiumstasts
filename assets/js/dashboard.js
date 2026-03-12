@@ -47,7 +47,8 @@ function insertarDatos(data) {
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
-      //location.reload();
+      alert("Datos insertados correctamente");
+      window.location.reload();
     })
     .catch((error) => {
       console.error("Error al insertar datos:", error);
@@ -87,11 +88,11 @@ function mapBackendToCard(d) {
                 secciones: [
                     {
                         titulo: "Inversión",
-                        valorPrincipal: `S/.${+d.adium_metaads + +d.adium_googleads + +d.adium_lkads}`,
+                        valorPrincipal: `$${+d.adium_metaads + +d.adium_googleads + +d.adium_lkads}`,
                         detalles: [
-                            { label: "Meta Ads",     valor: `S/.${d.adium_metaads}` },
-                            { label: "Google Ads",   valor: `S/.${d.adium_googleads}` },
-                            { label: "LinkedIn Ads", valor: `S/.${d.adium_lkads}` },
+                            { label: "Meta Ads",     valor: `$${d.adium_metaads}` },
+                            { label: "Google Ads",   valor: `$${d.adium_googleads}` },
+                            { label: "LinkedIn Ads", valor: `$${d.adium_lkads}` },
                         ]
                     },
                     {
@@ -129,9 +130,9 @@ function mapBackendToCard(d) {
                     },
                 ],
                 metricasSimples: [
-                    { label: "Tiempo",       valor: `${d.adium_tiempo} min` },
+                    { label: "Tiempo",       valor: `${d.adium_tiempo} min ${d.adium_tiempo_segundos} seg` },
                     { label: "Rebote",       valor: `${d.adium_rebote}%` },
-                    { label: "Conversiones", valor: `${d.adium_conversiones}%` },
+                    { label: "Conversiones", valor: `${d.adium_conversiones}` },
                 ]
             },
             {
@@ -139,11 +140,11 @@ function mapBackendToCard(d) {
                 secciones: [
                     {
                         titulo: "Inversión",
-                        valorPrincipal: `S/.${+d.mseh_inversion_metaads + +d.mseh_googleads + +d.mseh_lkads}`,
+                        valorPrincipal: `$${+d.mseh_inversion_metaads + +d.mseh_googleads + +d.mseh_lkads}`,
                         detalles: [
-                            { label: "Meta Ads",     valor: `S/.${d.mseh_inversion_metaads}` },
-                            { label: "Google Ads",   valor: `S/.${d.mseh_googleads}` },
-                            { label: "LinkedIn Ads", valor: `S/.${d.mseh_lkads}` },
+                            { label: "Meta Ads",     valor: `$${d.mseh_inversion_metaads}` },
+                            { label: "Google Ads",   valor: `$${d.mseh_googleads}` },
+                            { label: "LinkedIn Ads", valor: `$${d.mseh_lkads}` },
                         ]
                     },
                     {
@@ -181,7 +182,7 @@ function mapBackendToCard(d) {
                     },
                 ],
                 metricasSimples: [
-                    { label: "Tiempo",  valor: `${d.mseh_tiempo} min` },
+                    { label: "Tiempo",  valor: `${d.mseh_tiempo} min ${d.mseh_tiempo_segundos} seg` },
                     { label: "Rebote",  valor: `${d.mseh_rebote}%` },
                 ]
             },
@@ -190,11 +191,11 @@ function mapBackendToCard(d) {
                 secciones: [
                     {
                         titulo: "Inversión",
-                        valorPrincipal: `S/.${+d.insti_metaads + +d.insti_googleads + +d.insti_lkads}`,
+                        valorPrincipal: `$${+d.insti_metaads + +d.insti_googleads + +d.insti_lkads}`,
                         detalles: [
-                            { label: "Meta Ads",     valor: `S/.${d.insti_metaads}` },
-                            { label: "Google Ads",   valor: `S/.${d.insti_googleads}` },
-                            { label: "LinkedIn Ads", valor: `S/.${d.insti_lkads}` },
+                            { label: "Meta Ads",     valor: `$${d.insti_metaads}` },
+                            { label: "Google Ads",   valor: `$${d.insti_googleads}` },
+                            { label: "LinkedIn Ads", valor: `$${d.insti_lkads}` },
                         ]
                     },
                     {
@@ -224,7 +225,7 @@ function mapBackendToCard(d) {
                     },
                 ],
                 metricasSimples: [
-                    { label: "Tiempo", valor: `${d.insti_tiempo} min` },
+                    { label: "Tiempo", valor: `${d.insti_tiempo} min ${d.insti_tiempo_segundos} seg` },
                     { label: "Rebote", valor: `${d.insti_rebote}%` },
                 ]
             },

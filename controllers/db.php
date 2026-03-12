@@ -22,7 +22,7 @@ $conexion = mysqli_connect($servername,$username,$password,$database);
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "fbbva_newversion";
+$database = "adiumstats";
 $conexion = mysqli_connect($servername,$username,$password,$database);
 */
 
