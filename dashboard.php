@@ -60,7 +60,7 @@ if (!isset($_SESSION['nombre'])) {
             <!-- PANEL IZQUIERDO: Formulario de entrada -->
             <section id="fixed-form-container">
                 <div
-                    class="min-w-[400px] bg-white rounded-[2.5rem] shadow-sm p-8 border border-gray-100 flex flex-col justify-between">
+                    class="min-w-[400px] bg-white rounded-[2.5rem] shadow-sm p-8 border-4 border-blue-300 flex flex-col justify-between">
                     <form id="metrics-input-form" class="p-4">
 
                         <div class="flex flex-col mb-8">
@@ -103,7 +103,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Inversión -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
                                         Inversión</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -129,7 +129,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Post social -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">Post
                                         social</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -154,7 +154,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Posts web -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">Posts
                                         web</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -175,7 +175,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Visitas -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
                                         Visitas</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -195,7 +195,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Tráfico -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
                                         Tráfico</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -248,7 +248,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Inversión -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
                                         Inversión</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -275,7 +275,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Post social -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">Post
                                         social</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -300,7 +300,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Posts web -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">Posts
                                         web</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -323,7 +323,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Visitas -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
                                         Visitas</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -343,7 +343,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Tráfico -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
                                         Tráfico</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -394,7 +394,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Inversión -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
                                         Inversión</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -420,7 +420,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Post social -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">Post
                                         social</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -445,7 +445,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Visitas -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
                                         Visitas</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -465,7 +465,7 @@ if (!isset($_SESSION['nombre'])) {
 
                             <!-- Tráfico -->
                             <div class="flex flex-col gap-2 ml-4">
-                                <details class="bg-white rounded-lg" open>
+                                <details class="bg-white rounded-lg" close>
                                     <summary style="cursor:pointer;" class="text-[13px] font-bold text-slate-700">
                                         Tráfico</summary>
                                     <div class="flex flex-col gap-3 ml-4 mt-3">
@@ -515,7 +515,6 @@ if (!isset($_SESSION['nombre'])) {
                     </form>
                 </div>
             </section>
-
             <!-- PANEL DERECHO: Cards de registros (scroll horizontal) -->
             <div id="scroll-container" class="custom-scroll flex gap-6 overflow-x-auto pb-6 snap-x w-full">
                 <!-- Los cards se renderizan aquí desde JS -->
